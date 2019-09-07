@@ -1,0 +1,127 @@
+[alias] 
+  sts = status -s 
+  st = status 
+
+  cl = clone 
+
+  # Alias Commit 
+  c = commit 
+  cm = commit -m 
+  ca = commit --amend 
+  cf = commit --fixup 
+  cs = commit --squash 
+
+  # Alias Rebase 
+  re = rebase 
+  ri = rebase -i 
+  ria = rebase -i --autosquash 
+  rc = rebase --continue 
+  rs = rebase --skip 
+
+  # Alias Fetch 
+  fe = fetch 
+  fo = fetch origin 
+  fp = fetch --prune 
+  fpo = fetch --prune origin 
+  fpu = fetch --prune upstream 
+
+  # Alias autre 
+  filelog = log -u 
+  fl = log -u 
+
+  cp = cherry-pick 
+  co = checkout 
+  unstage = reset HEAD 
+  precommit = diff --cached --diff-algorithm=minimal -w 
+
+  # Alias push 
+  pushf = push --force-with-lease 
+
+  # Alias Branch 
+  br = branch 
+  bra = branch -ra 
+
+  #list commands 
+  tip = log -n 1 --abbrev-commit --decorate 
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit 
+  lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%ae %Creset%s' --abbrev-commit --all
+
+  tig = log --graph --boundary --left-right --cherry-pick --decorate HEAD...FETCH_HEAD 
+
+  #list all aliases 
+  la = "!git config -l | grep alias | cut -c 7-" 
+  #list modified files in last commit 
+  dl = "!git ll -1" 
+
+  #diff last commit 
+  dlc = diff --cached HEAD^ 
+  dr  = "!f() { git diff -w "$1"^.."$1"; }; f" 
+  diffr  = "!f() { git diff "$1"^.."$1"; }; f" 
+  dw = diff --word-diff 
+  dcw = diff --color-words 
+  dcwr = diff --color-word=. 
+
+  #r = reset 
+  #r1 = reset HEAD^ 
+  #r2 = reset HEAD^^ 
+  #rh = reset --hard 
+  #rh1 = reset HEAD^ --hard 
+  #rh2 = reset HEAD^^ --hard 
+  #nevermind = !git reset --hard HEAD && git clean -d -f 
+
+  #stash 
+  sl = stash list 
+  stashes = stash list 
+  sa = stash apply 
+  ss = stash save 
+  sp = stash pop 
+
+  last = log -1 --stat 
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+
+[color] 
+  branch = auto 
+  diff = auto 
+  status = auto 
+  ui = true 
+
+[color "branch"] 
+  current = red reverse 
+  local = cyan 
+  remote = green 
+
+[color "diff"] 
+  meta = yellow 
+  frag = magenta 
+  old = red bold 
+  new = green 
+  plain = white 
+
+[color "status"] 
+  added = yellow 
+  changed = green 
+  untracked = cyan 
+  interactive = auto 
+
+[merge] 
+   tool = vim 
+   conflictStyle = diff3 
+
+[core] 
+  autocrlf = input 
+  trustctime = false 
+  editor = 'c:/program files/sublime text 3/subl.exe' -w 
+  filemode = false 
+  eof = lf 
+	preloadindex = true
+	fscache = true
+[push] 
+  default = upstream 
+
+[pull] 
+  rebase = preserve 
+  
+[credential] 
+  helper = wincred
+[gc]
+	auto = 256
