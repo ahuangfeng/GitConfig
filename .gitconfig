@@ -104,8 +104,8 @@
   interactive = auto 
 
 [merge] 
-   tool = vim 
-   conflictStyle = diff3 
+  tool = nano 
+  conflictStyle = diff3 
 
 [core] 
   autocrlf = input 
@@ -113,8 +113,9 @@
   editor = 'c:/program files/sublime text 3/subl.exe' -w 
   filemode = false 
   eof = lf 
-	preloadindex = true
-	fscache = true
+  preloadindex = true
+  fscache = true
+
 [push] 
   default = upstream 
 
@@ -123,5 +124,6 @@
   
 [credential] 
   helper = wincred
+
 [gc]
-	auto = 256
+  auto = 256
