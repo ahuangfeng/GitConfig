@@ -115,6 +115,7 @@
   eof = lf 
   preloadindex = true
   fscache = true
+  pager = less -FX
 
 [push] 
   default = upstream 
