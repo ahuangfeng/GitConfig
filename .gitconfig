@@ -61,9 +61,9 @@
   dcw = diff --color-words 
   dcwr = diff --color-word=. 
 
-  #r = reset 
-  #r1 = reset HEAD^ 
-  #r2 = reset HEAD^^ 
+  r = reset 
+  r1 = reset HEAD^ 
+  r2 = reset HEAD^^ 
   #rh = reset --hard 
   #rh1 = reset HEAD^ --hard 
   #rh2 = reset HEAD^^ --hard 
@@ -110,7 +110,7 @@
 [core] 
   autocrlf = input 
   trustctime = false 
-  editor = 'c:/program files/sublime text 3/subl.exe' -w 
+  editor = nano
   filemode = false 
   eof = lf 
   preloadindex = true
